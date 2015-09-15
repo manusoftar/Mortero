@@ -1,8 +1,7 @@
 {
     "parent":"builtin/generated",
     "textures": {
-        "layer0":"mortero:items/item_saltcrystal",
-        "layer1":"mortero:items/item_saltcrystal2"
+        "layer0":"mortero:items/item_saltcrystal"
     },
     "display": {
         "thirdperson": {
