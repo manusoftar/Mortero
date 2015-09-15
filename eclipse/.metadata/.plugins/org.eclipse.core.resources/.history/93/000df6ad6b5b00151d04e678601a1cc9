@@ -1,0 +1,7 @@
+package com.manusoftar.mortero.items;
+
+import Item;
+
+public class SalitreItem extends Item {
+
+}

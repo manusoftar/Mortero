@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "mortero:salitre_block" },
+        "inventory": { "model": "mortero:salitre_block" }
+    }
+}

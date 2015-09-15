@@ -1,0 +1,5 @@
+package com.manusoftar.mortero.items.render;
+
+public class ItemRenderer {
+
+}

@@ -1,0 +1,31 @@
+package com.manusoftar.mortero.bloques;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class Salitre extends Block {
+
+	@SideOnly(Side.CLIENT)
+	public EnumWorldBlockLayer getBlockLayer(){ return EnumWorldBlockLayer.SOLID; }
+	
+	@Override public boolean isOpaqueCube() { return true; }
+	
+	@Override public boolean isFullCube() { return true; }
+	
+	@Override public int getRenderType() { return 3; }
+	
+	public Salitre(Material materialIn) {
+		super(materialIn);
+		this.setCreativeTab(CreativeTabs.tabBlock);
+		// TODO Auto-generated constructor stub
+		this.setHarvestLevel("picaxe", 2); //Se necesita pico de hierro
+		this.setUnlocalizedName("salitre_ore");
+		this.setHardness(2.5f);
+	}
+	   
+
+}

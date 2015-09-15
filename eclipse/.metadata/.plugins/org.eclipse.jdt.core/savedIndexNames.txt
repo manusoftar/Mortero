@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+C:\Users\Manusoftar\Forge Mods\Mortero\eclipse\.metadata\.plugins\org.eclipse.jdt.core
+1384282820.index

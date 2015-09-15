@@ -1,0 +1,17 @@
+package com.manusoftar.mortero.bloques;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class Salitre extends Block {
+
+	public Salitre(Material materialIn) {
+		super(materialIn);
+		// TODO Auto-generated constructor stub
+		this.setHarvestLevel("picaxe", 2); //Se necesita pico de hierro
+		this.setUnlocalizedName("Salitre_Ore");
+		
+	}
+	   
+
+}
