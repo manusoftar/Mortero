@@ -1,0 +1,51 @@
+package com.manusoftar.mortero;
+
+import com.manusoftar.mortero.bloques.Salitre;
+import com.manusoftar.mortero.bloques.render.BlockRenderer;
+import com.manusoftar.mortero.items.SalitreItem;
+import com.manusoftar.mortero.items.render.ItemRenderer;
+
+import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+@Mod(modid = Mortero.MODID, version = Mortero.VERSION)
+public class Mortero
+{
+    public static final String MODID = "mortero";
+    public static final String VERSION = "1.0";
+    
+    public static Salitre salitre;
+    public static SalitreItem sitem;
+    BlockRenderer br;
+    
+    public static void createBlocks(){
+    	
+    	GameRegistry.registerBlock(salitre, "salitre_ore");
+    }
+    
+    
+    
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+		// some example code
+        //System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
+    	salitre = new Salitre(Material.rock);
+    	sitem = new SalitreItem("salitre_crystal");
+    	createItems();
+    	createBlocks();
+    	BlockRenderer.registerBlockRenderer(salitre);
+    	ItemRenderer.registerItemRenderer(sitem);
+    }
+
+
+
+	private static void createItems() {
+		// TODO Auto-generated method stub
+		GameRegistry.registerItem(sitem, "salitre_crystal");
+	}
+}

@@ -1,0 +1,84 @@
+[18:35:01] [Client thread/INFO]: Setting user: Player952
+[18:35:03] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:35:05] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
+[18:35:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:35:06] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[18:35:06] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:35:06] [Thread-8/INFO]: OpenAL initialized.
+[18:35:06] [Sound Library Loader/INFO]: Sound engine started
+[18:35:08] [Client thread/INFO]: Created: 16x16 textures-atlas
+[18:35:09] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
+[18:35:09] [Client thread/INFO]: SoundSystem shutting down...
+[18:35:09] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:35:09] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:35:09] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[18:35:09] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:35:09] [Thread-10/INFO]: OpenAL initialized.
+[18:35:09] [Sound Library Loader/INFO]: Sound engine started
+[18:35:11] [Client thread/WARN]: Texture mortero:textures/blocks/salitre_ore.png with size 21x21 limits mip level from 4 to 0
+[18:35:11] [Client thread/INFO]: Created: 512x512 textures-atlas
+[18:35:28] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[18:35:28] [Server thread/INFO]: Generating keypair
+[18:35:28] [Server thread/INFO]: Converting map!
+[18:35:28] [Server thread/INFO]: Scanning folders...
+[18:35:28] [Server thread/INFO]: Total conversion count is 0
+[18:35:28] [Server thread/INFO]: Preparing start region for level 0
+[18:35:29] [Server thread/INFO]: Preparing spawn area: 14%
+[18:35:30] [Server thread/INFO]: Preparing spawn area: 32%
+[18:35:31] [Server thread/INFO]: Preparing spawn area: 50%
+[18:35:32] [Server thread/INFO]: Preparing spawn area: 73%
+[18:35:33] [Server thread/INFO]: Preparing spawn area: 96%
+[18:35:34] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:35:35] [Server thread/INFO]: Player952[local:E:7468b9e3] logged in with entity id 145 at (30.5, 57.0, 184.5)
+[18:35:35] [Server thread/INFO]: Player952 joined the game
+[18:35:36] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@245a06f4[id=fef5996a-ff47-30bf-9025-1401c61fa24d,name=Player952,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:158) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:53) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:50) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827) [guava-17.0.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:148) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:138) [SkinManager$3.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_60]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+[18:35:48] [Server thread/INFO]: [Player952: Set the time to 1000]
+[18:35:48] [Client thread/INFO]: [CHAT] Set the time to 1000
+[18:36:09] [Server thread/INFO]: Player952 has just earned the achievement [Taking Inventory]
+[18:36:09] [Client thread/INFO]: [CHAT] Player952 has just earned the achievement [Taking Inventory]
+[18:36:22] [Client thread/INFO]: [CHAT] That player cannot be found
+[18:36:38] [Server thread/INFO]: [Player952: Given [tile.salitre_ore.name] * 1 to Player952]
+[18:36:38] [Client thread/INFO]: [CHAT] Given [tile.salitre_ore.name] * 1 to Player952
+[18:36:43] [Server thread/INFO]: [Player952: Given [tile.salitre_ore.name] * 21 to Player952]
+[18:36:43] [Client thread/INFO]: [CHAT] Given [tile.salitre_ore.name] * 21 to Player952
+[18:37:24] [Server thread/INFO]: [Player952: Given [Iron Pickaxe] * 1 to Player952]
+[18:37:24] [Client thread/INFO]: [CHAT] Given [Iron Pickaxe] * 1 to Player952
+[18:38:27] [Server thread/INFO]: Saving and pausing game...
+[18:38:27] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:38:27] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:38:27] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:38:40] [Server thread/INFO]: [Player952: Given [item.salitre_crystal.name] * 1 to Player952]
+[18:38:40] [Client thread/INFO]: [CHAT] Given [item.salitre_crystal.name] * 1 to Player952
+[18:38:48] [Server thread/INFO]: Saving and pausing game...
+[18:38:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:38:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:38:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:38:49] [Server thread/INFO]: Stopping server
+[18:38:49] [Server thread/INFO]: Saving players
+[18:38:49] [Server thread/INFO]: Saving worlds
+[18:38:49] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:38:49] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:38:49] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:38:50] [Client thread/INFO]: Stopping!
+[18:38:50] [Client thread/INFO]: SoundSystem shutting down...
+[18:38:50] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
