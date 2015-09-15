@@ -5,11 +5,11 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : snapshot_20150812
 ****************************
-:extractMcpData
+:extractMcpData UP-TO-DATE
 :getVersionJson
-:extractUserDev
+:extractUserDev UP-TO-DATE
 :genSrgs SKIPPED
-:extractNatives
+:extractNatives UP-TO-DATE
 :getAssetsIndex
 :getAssets
 :makeStart
@@ -34,4 +34,4 @@
 
 BUILD SUCCESSFUL
 
-Total time: 27.934 secs
+Total time: 22.363 secs

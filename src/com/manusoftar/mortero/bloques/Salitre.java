@@ -31,7 +31,7 @@ public class Salitre extends Block {
 		super(materialIn);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		// TODO Auto-generated constructor stub
-		this.setHarvestLevel("pickaxe", 2); //Se necesita pico de hierro
+		this.setHarvestLevel("picaxe", 2); //Se necesita pico de hierro
 		this.setUnlocalizedName("salitre_ore");
 		this.setHardness(2.5f);
 	}

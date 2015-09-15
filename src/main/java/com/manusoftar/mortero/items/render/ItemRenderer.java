@@ -9,6 +9,6 @@ public class ItemRenderer {
 	  	
 	
 	   public static void registerItemRenderer(Item item){
-		   	  Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation("mortero:salitre_crystal", "Inventory"));
+		   	  Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation("mortero:salitre_crystal", "inventory"));
 	   }
 }
