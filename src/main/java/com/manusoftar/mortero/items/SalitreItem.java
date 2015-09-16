@@ -5,8 +5,11 @@ import net.minecraft.item.Item;
 
 public class SalitreItem extends Item {
 		
+		public static SalitreItem instance;
+	
 		public SalitreItem(){
 			super();
+			instance = this;
 		}
 		
 		public SalitreItem(String unlocalizedname){
