@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "mortero:azufre_block" },
+        "inventory": { "model": "mortero:azufre_block" }
+    }
+}
