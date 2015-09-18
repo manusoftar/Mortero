@@ -3,6 +3,7 @@ package com.manusoftar.mortero;
 import com.manusoftar.mortero.bloques.Salitre;
 import com.manusoftar.mortero.bloques.render.BlockRenderer;
 import com.manusoftar.mortero.crafting.Recipes;
+import com.manusoftar.mortero.handlers.GuiHandler;
 import com.manusoftar.mortero.items.SalitreItem;
 import com.manusoftar.mortero.items.render.ItemRenderer;
 import com.manusoftar.mortero.proxy.CommonProxy;
@@ -10,11 +11,14 @@ import com.manusoftar.mortero.proxy.CommonProxy;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Mortero.MODID, version = Mortero.VERSION, name = Mortero.NAME)
@@ -51,6 +55,9 @@ public class Mortero {
     	proxy.registerRenderers();
     	proxy.registerWorldGen();
     	Recipes.initRecipes();
+    	//MinecraftForge.EVENT_BUS.register(new GuiHandler());
+    	//FMLCommonHandler.instance().bus().register(new GuiHandler());
+    	
     }
 
 
