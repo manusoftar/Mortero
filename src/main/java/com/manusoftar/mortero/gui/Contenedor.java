@@ -48,6 +48,7 @@ public class Contenedor extends GuiContainer {
         this.mc.renderEngine.bindTexture(texture);
         int x = (width - xSize) / 2;
         int y = (height - ySize) / 2;
+        //System.out.println("Ancho: " + width + "\nAlto: " + height);
         this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
 		
 	}
