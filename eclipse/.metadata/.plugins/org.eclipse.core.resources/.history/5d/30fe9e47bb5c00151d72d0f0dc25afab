@@ -1,0 +1,26 @@
+package com.manusoftar.mortero.items;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class Mortar extends Item {
+	public static Mortar instance;
+	
+	public Mortar(){
+		super();
+		instance = this;
+	}
+	
+	public Mortar(String unlocalizedname){
+		super();
+		this.setUnlocalizedName(unlocalizedname);
+		this.setCreativeTab(CreativeTabs.tabMisc);
+		instance = this;
+		
+		
+	}
+	
+	@Override
+	public void onItemRightClick()
+
+}

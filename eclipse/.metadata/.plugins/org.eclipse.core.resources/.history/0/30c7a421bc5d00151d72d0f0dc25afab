@@ -1,0 +1,5 @@
+package com.manusoftar.mortero.handlers;
+
+public class ContenedorBase {
+
+}
