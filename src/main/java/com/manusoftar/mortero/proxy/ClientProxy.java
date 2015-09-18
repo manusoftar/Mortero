@@ -85,7 +85,7 @@ boolean initDone = false;
     	
     	registerBlocksTextures(blocks);
     	registerItemsTextures(items);
-    	NetworkRegistry.INSTANCE.registerGuiHandler(Mortero.instance, new GuiHandler());
+    	
 		
 	}
 	

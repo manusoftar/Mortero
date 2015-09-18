@@ -57,7 +57,7 @@ public class Mortero {
     	Recipes.initRecipes();
     	//MinecraftForge.EVENT_BUS.register(new GuiHandler());
     	//FMLCommonHandler.instance().bus().register(new GuiHandler());
-    	
+    	NetworkRegistry.INSTANCE.registerGuiHandler(Mortero.instance, new GuiHandler());
     }
 
 

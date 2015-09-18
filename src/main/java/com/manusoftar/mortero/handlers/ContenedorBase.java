@@ -15,16 +15,23 @@ public class ContenedorBase  extends Container {
 	} 
 	
 	private Slot s1,s2,s3,s4;
+	private InventoryItem i1,i2,i3,i4;
 	
 	public ContenedorBase(){
-		s1 = new Slot(new InventoryItem(), 0, 29, 16);
-		s2 = new Slot(new InventoryItem(), 1, 29, 36);
-		s3 = new Slot(new InventoryItem(), 2, 29, 77);
-		s4 = new Slot(new InventoryItem(), 3, 119, 30);
+		i1 = new InventoryItem();
+		i2 = new InventoryItem();
+		i3 = new InventoryItem();
+		i4 = new InventoryItem();
+		s1 = new Slot(i1, 0, 29, 16);
+		s2 = new Slot(i2, 1, 29, 36);
+		s3 = new Slot(i3, 2, 29, 77);
+		s4 = new Slot(i4, 3, 119, 30);
 		
 		addSlotToContainer(s1);
 		addSlotToContainer(s2);
 		addSlotToContainer(s3);
 		addSlotToContainer(s4);
+		
+		
 	}
 }
