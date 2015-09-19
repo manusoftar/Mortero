@@ -23,13 +23,13 @@ public class ContenedorBase  extends Container {
 	
 	public ContenedorBase(InventoryPlayer inventory){
 		i1 = new InventoryItem();
-		i2 = new InventoryItem();
+		/*i2 = new InventoryItem();
 		i3 = new InventoryItem();
-		i4 = new InventoryItem();
+		i4 = new InventoryItem();*/
 		s1 = new Slot(i1, 0, 29, 16);
-		s2 = new Slot(i2, 1, 29, 36);
-		s3 = new Slot(i3, 2, 29, 56);
-		s4 = new Slot(i4, 3, 119, 36);
+		s2 = new Slot(i1, 1, 29, 36);
+		s3 = new Slot(i1, 2, 29, 56);
+		s4 = new Slot(i1, 3, 119, 36);
 		
 		
 		addSlotToContainer(s1);

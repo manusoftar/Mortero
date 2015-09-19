@@ -6,7 +6,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IChatComponent;
 
 public class InventoryItem implements IInventory {
-
+	
+	private ItemStack[] items;
+	
+	
+	public InventoryItem(){
+			items = new ItemStack[4];
+	}
+	
 	@Override
 	public String getCommandSenderName() {
 		// TODO Auto-generated method stub
@@ -28,12 +35,15 @@ public class InventoryItem implements IInventory {
 	@Override
 	public int getSizeInventory() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 4;
 	}
 
 	@Override
 	public ItemStack getStackInSlot(int index) {
 		// TODO Auto-generated method stub
+		if (index >= 0 && index <items.length){
+			return items[index];
+		}
 		return null;
 	}
 
@@ -47,19 +57,21 @@ public class InventoryItem implements IInventory {
 	@Override
 	public ItemStack getStackInSlotOnClosing(int index) {
 		// TODO Auto-generated method stub
-		return null;
+		return getStackInSlot(index);
 	}
 
 	@Override
 	public void setInventorySlotContents(int index, ItemStack stack) {
 		// TODO Auto-generated method stub
-		
+		if (index>=0 && index < items.length){
+			items[index]=stack;
+		}
 	}
 
 	@Override
 	public int getInventoryStackLimit() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 64;
 	}
 
 	@Override
@@ -71,7 +83,7 @@ public class InventoryItem implements IInventory {
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer player) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
@@ -89,7 +101,7 @@ public class InventoryItem implements IInventory {
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
