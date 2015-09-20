@@ -41,9 +41,17 @@ public class InventoryItem implements IInventory {
 	@Override
 	public ItemStack getStackInSlot(int index) {
 		// TODO Auto-generated method stub
-		if (index >= 0 && index <items.length){
-			return items[index];
+		
+		//System.out.println("getStackInSlot con index: " + index);
+		
+		if (index >= 28 && index < 32) {
+			if (items[index-28]!=null){
+				return items[index-28].copy();
+			} else { 
+				return null;
+			}
 		}
+		
 		return null;
 	}
 
@@ -63,9 +71,15 @@ public class InventoryItem implements IInventory {
 	@Override
 	public void setInventorySlotContents(int index, ItemStack stack) {
 		// TODO Auto-generated method stub
-		if (index>=0 && index < items.length){
-			items[index]=stack;
+		if (index >= 28 && index < 32){
+			if (items[index-28]==null){
+				items[index-28]=stack.copy();
+			} else {
+				items[index-28].stackSize+=stack.stackSize;
+			}
 		}
+		
+		//System.out.println("setInventorySlotContents con index: " + index);
 	}
 
 	@Override
@@ -95,7 +109,7 @@ public class InventoryItem implements IInventory {
 	@Override
 	public void closeInventory(EntityPlayer player) {
 		// TODO Auto-generated method stub
-		
+		//player.inventory.
 	}
 
 	@Override
@@ -128,4 +142,5 @@ public class InventoryItem implements IInventory {
 		
 	}
 
+	
 }

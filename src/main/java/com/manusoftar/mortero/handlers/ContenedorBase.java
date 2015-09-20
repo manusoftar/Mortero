@@ -9,6 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 
 public class ContenedorBase  extends Container {
 
@@ -18,24 +19,23 @@ public class ContenedorBase  extends Container {
 		return true;
 	} 
 	
-	private Slot s1,s2,s3,s4;
-	private InventoryItem i1,i2,i3,i4;
+	public static Slot[] slots;
+	private InventoryItem i1;
 	
 	public ContenedorBase(InventoryPlayer inventory){
 		i1 = new InventoryItem();
 		/*i2 = new InventoryItem();
 		i3 = new InventoryItem();
 		i4 = new InventoryItem();*/
-		s1 = new Slot(i1, 0, 29, 16);
-		s2 = new Slot(i1, 1, 29, 36);
-		s3 = new Slot(i1, 2, 29, 56);
-		s4 = new Slot(i1, 3, 119, 36);
+		slots = new Slot[4];
+		slots[0] = new Slot(i1, 28, 30, 17);
+		slots[1] = new Slot(i1, 29, 30, 38);
+		slots[2] = new Slot(i1, 30, 30, 59);
+		slots[3] = new Slot(i1, 31, 124, 34);
 		
-		
-		addSlotToContainer(s1);
-		addSlotToContainer(s2);
-		addSlotToContainer(s3);
-		addSlotToContainer(s4);
+		for (Slot slot : slots){
+			addSlotToContainer(slot);
+		}
 		
 		bindPlayerInventory(inventory);
 		
@@ -52,4 +52,41 @@ public class ContenedorBase  extends Container {
                 addSlotToContainer(new Slot(inventoryPlayer, i, 8 + i * 18, 142));
         }
 	}
+	
+	@Override 
+	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index){
+		ItemStack stack = null;
+        Slot slotObject = (Slot) inventorySlots.get(index);	
+		
+        //null checks and checks if the item can be stacked (maxStackSize > 1)
+        if (slotObject != null && slotObject.getHasStack()) {
+                ItemStack stackInSlot = slotObject.getStack();
+                stack = stackInSlot.copy();
+
+                //merges the item into player inventory since its in the tileEntity
+                /*if (slot < slots.length) {
+                        if (!this.mergeItemStack(stackInSlot, tileEntity.getSizeInventory(), 36+tileEntity.getSizeInventory(), true)) {
+                                return null;
+                        }
+                }
+                //places it into the tileEntity is possible since its in the player inventory
+                else if (!this.mergeItemStack(stackInSlot, 0, tileEntity.getSizeInventory(), false)) {
+                        return null;
+                }*/
+
+                if (stackInSlot.stackSize == 0) {
+                        slotObject.putStack(null);
+                } else {
+                        slotObject.onSlotChanged();
+                }
+
+                if (stackInSlot.stackSize == stack.stackSize) {
+                        return null;
+                }
+                slotObject.onPickupFromSlot(playerIn, stackInSlot);
+        }
+        return stack;
+	}
+	
+	
 }
