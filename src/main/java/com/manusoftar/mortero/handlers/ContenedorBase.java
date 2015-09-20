@@ -22,8 +22,9 @@ public class ContenedorBase  extends Container {
 	public static Slot[] slots;
 	private InventoryItem i1;
 	
-	public ContenedorBase(InventoryPlayer inventory){
-		i1 = new InventoryItem();
+	public ContenedorBase(EntityPlayer player){
+		InventoryPlayer inventory = player.inventory;
+		i1 = new InventoryItem(player.getHeldItem());
 		/*i2 = new InventoryItem();
 		i3 = new InventoryItem();
 		i4 = new InventoryItem();*/
