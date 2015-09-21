@@ -1,9 +1,12 @@
 package com.manusoftar.mortero.gui;
 
+import com.manusoftar.mortero.handlers.ContenedorBase;
 import com.manusoftar.mortero.items.Mortar;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -16,9 +19,10 @@ public class InventoryItem implements IInventory {
 	
 	private ItemStack[] items;
 	
+	private final ContenedorBase eventHandler;
 	
 	
-	public InventoryItem(ItemStack stack){
+	public InventoryItem(ItemStack stack, ContenedorBase eHandler){
 		
 		items = new ItemStack[4];
 		// Create a new NBT Tag Compound if one doesn't already exist, or you will crash
@@ -26,6 +30,7 @@ public class InventoryItem implements IInventory {
 			stack.setTagCompound(new NBTTagCompound());
 		}
 		invItem = stack;
+		eventHandler = eHandler;
 		// note that it's okay to use stack instead of invItem right there
 		// both reference the same memory location, so whatever you change using
 		// either reference will change in the other
@@ -36,6 +41,20 @@ public class InventoryItem implements IInventory {
 			
 	}
 	
+	public int getItems(ItemStack instance){
+		   int result = 0;
+		   for (ItemStack item : items) {
+			    if (item.isItemEqual(instance)){
+			    	result = item.getMaxStackSize();
+			    	return result;
+			    }
+		   }
+		   return result;
+	}
+	
+	
+	
+		
 	@Override
 	public String getCommandSenderName() {
 		// TODO Auto-generated method stub
@@ -66,21 +85,16 @@ public class InventoryItem implements IInventory {
 		
 		//System.out.println("getStackInSlot con index: " + index);
 		
-		if (index >= 28 && index < 32) {
-			if (items[index-28]!=null){
-				return items[index-28];
-			} else { 
-				return null;
-			}
-		}
-		
-		return null;
+			if (items[index]!=null){
+				return items[index];
+			} 
+			return null;
 	}
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
 		// TODO Auto-generated method stub
-		ItemStack stack = getStackInSlot(index);
+		/*ItemStack stack = getStackInSlot(index);
 		if(stack != null)
 		{
 			if(stack.stackSize > count)
@@ -94,8 +108,38 @@ public class InventoryItem implements IInventory {
 				// this method also calls onInventoryChanged, so we don't need to call it again
 				setInventorySlotContents(index, null);
 			}
+			return stack;
 		}
-		return stack;
+		return null;*/
+		
+		if (this.items[index] != null)
+        {
+            ItemStack itemstack;
+
+            if (this.items[index].stackSize <= count)
+            {
+                itemstack = this.items[index];
+                this.items[index] = null;
+                this.eventHandler.onCraftMatrixChanged(this);
+                return itemstack;
+            }
+            else
+            {
+                itemstack = this.items[index].splitStack(count);
+
+                if (this.items[index].stackSize == 0)
+                {
+                    this.items[index] = null;
+                }
+
+                this.eventHandler.onCraftMatrixChanged(this);
+                return itemstack;
+            }
+        }
+        else
+        {
+            return null;
+        }
 	}
 
 	@Override
@@ -111,17 +155,21 @@ public class InventoryItem implements IInventory {
 	public void setInventorySlotContents(int index, ItemStack stack) {
 		// TODO Auto-generated method stub
 		//invItem = stack;
-		if (index >= 28 && index < 32){
-			if (items[index-28]==null){
-				items[index-28]=stack;
-			} else {
-				if (stack!=null){
-					items[index-28].stackSize+=stack.stackSize;
+			//if (items[index-28]==null){
+		if (items[index]!=null){
+			if (!items[index].getIsItemStackEqual(stack)){
+				items[index]=stack;
+					//}
+				this.eventHandler.onCraftMatrixChanged(this);
+				if (index!=3){
+					this.eventHandler.setCrafted(false);
 				}
-			}
+				markDirty();
+			} 
+		} else {
+			items[index]=stack;
+			markDirty();
 		}
-		
-		markDirty();
 		//System.out.println("setInventorySlotContents con index: " + index);
 	}
 

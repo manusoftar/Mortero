@@ -1,29 +1,29 @@
-[15:35:59] [Client thread/INFO]: Setting user: Player230
-[15:36:01] [Client thread/INFO]: LWJGL Version: 2.9.1
-[15:36:04] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
-[15:36:04] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[15:36:04] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[15:36:04] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[15:36:04] [Thread-9/INFO]: OpenAL initialized.
-[15:36:05] [Sound Library Loader/INFO]: Sound engine started
-[15:36:11] [Client thread/INFO]: Created: 16x16 textures-atlas
-[15:36:12] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
-[15:36:12] [Client thread/INFO]: SoundSystem shutting down...
-[15:36:12] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[15:36:12] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[15:36:12] [Thread-11/INFO]: Initializing LWJGL OpenAL
-[15:36:12] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[15:36:12] [Thread-11/INFO]: OpenAL initialized.
-[15:36:13] [Sound Library Loader/INFO]: Sound engine started
-[15:36:14] [Client thread/WARN]: Texture mortero:textures/blocks/salitre_ore.png with size 21x21 limits mip level from 4 to 0
-[15:36:14] [Client thread/INFO]: Created: 512x512 textures-atlas
-[15:36:17] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[15:36:17] [Server thread/INFO]: Generating keypair
-[15:36:17] [Server thread/INFO]: Preparing start region for level 0
-[15:36:18] [Server thread/INFO]: Changing view distance to 12, from 10
-[15:36:20] [Server thread/INFO]: Player230[local:E:8b87aeb8] logged in with entity id 15 at (-718.4220076661105, 66.0, 718.1076019211799)
-[15:36:20] [Server thread/INFO]: Player230 joined the game
-[15:36:21] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@d7b38cf[id=d6021e41-7343-3bee-bb0e-33bf78c6e47d,name=Player230,properties={},legacy=false]
+[02:57:38] [Client thread/INFO]: Setting user: Player204
+[02:57:40] [Client thread/INFO]: LWJGL Version: 2.9.1
+[02:57:42] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
+[02:57:43] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[02:57:43] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[02:57:43] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[02:57:43] [Thread-9/INFO]: OpenAL initialized.
+[02:57:43] [Sound Library Loader/INFO]: Sound engine started
+[02:57:45] [Client thread/INFO]: Created: 16x16 textures-atlas
+[02:57:46] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
+[02:57:46] [Client thread/INFO]: SoundSystem shutting down...
+[02:57:46] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[02:57:46] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[02:57:46] [Thread-11/INFO]: Initializing LWJGL OpenAL
+[02:57:46] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[02:57:46] [Thread-11/INFO]: OpenAL initialized.
+[02:57:47] [Sound Library Loader/INFO]: Sound engine started
+[02:57:48] [Client thread/WARN]: Texture mortero:textures/blocks/salitre_ore.png with size 21x21 limits mip level from 4 to 0
+[02:57:48] [Client thread/INFO]: Created: 512x512 textures-atlas
+[02:57:53] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[02:57:53] [Server thread/INFO]: Generating keypair
+[02:57:54] [Server thread/INFO]: Preparing start region for level 0
+[02:57:55] [Server thread/INFO]: Changing view distance to 12, from 10
+[02:57:56] [Server thread/INFO]: Player204[local:E:aeca3f8f] logged in with entity id 15 at (-712.5975907336165, 64.0, 705.0427109452363)
+[02:57:56] [Server thread/INFO]: Player204 joined the game
+[02:57:58] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@25370af5[id=ac41f76c-b1dd-32f9-a5d3-3eb94da3e653,name=Player204,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:158) [YggdrasilMinecraftSessionService.class:?]
@@ -44,18 +44,16 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_60]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_60]
 	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
-[15:36:49] [Server thread/INFO]: Player230 has just earned the achievement [Taking Inventory]
-[15:36:49] [Client thread/INFO]: [CHAT] Player230 has just earned the achievement [Taking Inventory]
-[15:39:38] [Server thread/INFO]: Saving and pausing game...
-[15:39:38] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[15:39:38] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[15:39:38] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[15:39:39] [Server thread/INFO]: Stopping server
-[15:39:39] [Server thread/INFO]: Saving players
-[15:39:39] [Server thread/INFO]: Saving worlds
-[15:39:39] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[15:39:39] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[15:39:39] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[15:39:40] [Client thread/INFO]: Stopping!
-[15:39:40] [Client thread/INFO]: SoundSystem shutting down...
-[15:39:40] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[02:58:36] [Server thread/INFO]: Saving and pausing game...
+[02:58:36] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[02:58:36] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[02:58:36] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[02:58:38] [Server thread/INFO]: Stopping server
+[02:58:38] [Server thread/INFO]: Saving players
+[02:58:38] [Server thread/INFO]: Saving worlds
+[02:58:38] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[02:58:38] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[02:58:38] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[02:58:39] [Client thread/INFO]: Stopping!
+[02:58:39] [Client thread/INFO]: SoundSystem shutting down...
+[02:58:39] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

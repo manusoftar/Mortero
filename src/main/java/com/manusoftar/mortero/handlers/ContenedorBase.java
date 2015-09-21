@@ -3,11 +3,16 @@ package com.manusoftar.mortero.handlers;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.manusoftar.mortero.gui.CustomSlot;
 import com.manusoftar.mortero.gui.InventoryItem;
+import com.manusoftar.mortero.items.SalitreItem;
+import com.manusoftar.mortero.items.SaltPowder;
+import com.manusoftar.mortero.proxy.ClientProxy;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
@@ -19,27 +24,79 @@ public class ContenedorBase  extends Container {
 		return true;
 	} 
 	
-	public static Slot[] slots;
+	public  CustomSlot[] slots;
 	private InventoryItem i1;
+	private boolean crafted = false;
 	
 	public ContenedorBase(EntityPlayer player){
 		InventoryPlayer inventory = player.inventory;
-		i1 = new InventoryItem(player.getHeldItem());
+		i1 = new InventoryItem(player.getHeldItem(),this);
 		/*i2 = new InventoryItem();
 		i3 = new InventoryItem();
 		i4 = new InventoryItem();*/
-		slots = new Slot[4];
-		slots[0] = new Slot(i1, 28, 30, 17);
-		slots[1] = new Slot(i1, 29, 30, 38);
-		slots[2] = new Slot(i1, 30, 30, 59);
-		slots[3] = new Slot(i1, 31, 124, 34);
+		slots = new CustomSlot[4];
+		slots[0] = new CustomSlot(i1, 0, 30, 17);
+		slots[1] = new CustomSlot(i1, 1, 30, 38);
+		slots[2] = new CustomSlot(i1, 2, 30, 59);
+		slots[3] = new CustomSlot(i1, 3, 124, 35);
 		
-		for (Slot slot : slots){
+		slots[3].setOutputOnly(true);
+		
+		for (CustomSlot slot : slots){
 			addSlotToContainer(slot);
 		}
 		
 		bindPlayerInventory(inventory);
 		
+	}
+	
+	@Override
+	public void onCraftMatrixChanged(IInventory inv){
+		   //TODO Verificar si la configuración es válida para un crafteo, en caso afirmativo generar el item correspondiente	
+		   
+		   //Primero checkeo si solo un slot tiene elementos, esto es para ver si tengo que craftear polvo de salitre
+		   if (!crafted){
+			   boolean empty1, empty2, empty3;
+			   empty1 = !slots[0].isEmpty();
+			   empty2 = !slots[1].isEmpty();
+			   empty3 = !slots[2].isEmpty();
+			   
+			   boolean onlyone = (empty1 ^ empty2 ^ empty3) ^ (empty1 && empty2 && empty3);
+			   System.out.println("Slot 0: " + !slots[0].isEmpty());
+			   System.out.println("Slot 1: " + !slots[1].isEmpty());
+			   System.out.println("Slot 2: " + !slots[2].isEmpty());
+			   System.out.println("Solo Un Slot: " + onlyone);
+			   
+			   /*System.out.println("Elemento en slot 0,0: " + slots[0].inventory.getStackInSlot(28));
+			   System.out.println("Elemento en slot 0,1: " + slots[0].inventory.getStackInSlot(29));
+			   System.out.println("Elemento en slot 0,2: " + slots[0].inventory.getStackInSlot(30));
+			   System.out.println("Elemento en slot 0,3: " + slots[0].inventory.getStackInSlot(31));*/
+			   
+			   //Si se cumple que solo un slot entonces tengo que ver si lo que tiene es cristal de salitre
+			   if (onlyone) {
+				   int slot = 0;
+				   ItemStack istack;
+				   //Busco el slot que tiene el item
+				   while((istack = inv.getStackInSlot(slot)) == null){
+					   slot++;
+				   }
+				   
+				   ItemStack aux1 = new ItemStack(SalitreItem.instance);
+				   aux1.setItem(ClientProxy.sitem);
+				   
+				   if (inv.getStackInSlot(slot).isItemEqual(aux1)){
+					   ItemStack aux = new ItemStack(SaltPowder.instance);
+					   aux.stackSize = inv.getStackInSlot(slot).stackSize;
+					   slots[3].inventory.setInventorySlotContents(3,aux);
+					   //inv.clear();
+				   }
+			   }
+			   crafted = true;
+		   }
+	}
+	
+	public void setCrafted(boolean crafted){
+		this.crafted = crafted;
 	}
 	
 	protected void bindPlayerInventory(InventoryPlayer inventoryPlayer) {

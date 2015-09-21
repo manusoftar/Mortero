@@ -10,6 +10,7 @@ import com.manusoftar.mortero.bloques.render.BlockRenderer;
 import com.manusoftar.mortero.handlers.GuiHandler;
 import com.manusoftar.mortero.items.Mortar;
 import com.manusoftar.mortero.items.SalitreItem;
+import com.manusoftar.mortero.items.SaltPowder;
 import com.manusoftar.mortero.items.render.ItemRenderer;
 import com.manusoftar.mortero.world.WorldGen;
 
@@ -26,6 +27,11 @@ public class ClientProxy extends CommonProxy {
 boolean initDone = false;
 	
 	public static List<Block> blocks;
+	public static SalitreItem sitem = new SalitreItem("salitre_crystal");;
+	public static Mortar mortero = new Mortar("item_mortar");
+	public static Salitre salitre = new Salitre(Material.rock, sitem);
+	public static Azufre azufre = new Azufre(Material.rock, null);
+	public static SaltPowder spowder = new SaltPowder("salt_powder");
 	
 	@Override
 	public void init() {
@@ -62,16 +68,18 @@ boolean initDone = false;
 		}*/
 		
 		
-    	SalitreItem sitem = new SalitreItem("salitre_crystal");
-    	Mortar mortero = new Mortar("item_mortar");
-    	Salitre salitre = new Salitre(Material.rock, sitem);
-    	Azufre azufre = new Azufre(Material.rock, null);
+    	 
+    	
+    	
+    	
+    	
     	
     	List<Item> items = new LinkedList<Item>();
     	blocks = new LinkedList<Block>();
     	
     	items.add(sitem);
     	items.add(mortero);
+    	items.add(spowder);
     	blocks.add(salitre);
     	blocks.add(azufre);
     	

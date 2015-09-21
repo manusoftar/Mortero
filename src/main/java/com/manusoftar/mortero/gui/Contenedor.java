@@ -5,6 +5,7 @@ import org.lwjgl.opengl.GL11;
 import com.manusoftar.mortero.Mortero;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.ITextureObject;
@@ -38,6 +39,11 @@ public class Contenedor extends GuiContainer {
 		
 		
 	}
+    
+    @Override
+    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+    		 this.drawString(this.fontRendererObj, "Mortero", (width-this.fontRendererObj.getStringWidth("Mortero"))/2, 20, 4210752);
+    }
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
@@ -51,6 +57,7 @@ public class Contenedor extends GuiContainer {
         //System.out.println("Ancho: " + width + "\nAlto: " + height);
         this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
 		
+        
 	}
 
    
