@@ -156,20 +156,17 @@ public class InventoryItem implements IInventory {
 		// TODO Auto-generated method stub
 		//invItem = stack;
 			//if (items[index-28]==null){
-		if (items[index]!=null){
-			if (!items[index].getIsItemStackEqual(stack)){
+		
 				items[index]=stack;
 					//}
-				this.eventHandler.onCraftMatrixChanged(this);
+				
+				
 				if (index!=3){
-					this.eventHandler.setCrafted(false);
+					//this.eventHandler.setCrafted(false);
+					this.eventHandler.onCraftMatrixChanged(this);
 				}
 				markDirty();
-			} 
-		} else {
-			items[index]=stack;
-			markDirty();
-		}
+		
 		//System.out.println("setInventorySlotContents con index: " + index);
 	}
 

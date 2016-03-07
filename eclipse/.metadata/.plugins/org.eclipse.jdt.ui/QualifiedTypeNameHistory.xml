@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="com.manusoftar.mortero.bloques.Salitre"/>
 <fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
 <fullyQualifiedTypeName name="com.manusoftar.mortero.bloques.render.BlockRenderer"/>
-<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraft.util.EnumWorldBlockLayer"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.relauncher.SideOnly"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.relauncher.Side"/>
@@ -11,13 +10,27 @@
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 <fullyQualifiedTypeName name="net.minecraft.client.resources.model.ModelResourceLocation"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="com.manusoftar.mortero.items.render.ItemRenderer"/>
 <fullyQualifiedTypeName name="net.minecraft.world.IBlockAccess"/>
 <fullyQualifiedTypeName name="net.minecraft.util.BlockPos"/>
 <fullyQualifiedTypeName name="net.minecraft.block.state.IBlockState"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
-<fullyQualifiedTypeName name="com.manusoftar.mortero.items.SalitreItem"/>
 <fullyQualifiedTypeName name="com.manusoftar.mortero.Mortero"/>
+<fullyQualifiedTypeName name="net.minecraft.inventory.Slot"/>
+<fullyQualifiedTypeName name="com.manusoftar.mortero.gui.CustomSlot"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.inventory.GuiCrafting"/>
+<fullyQualifiedTypeName name="net.minecraft.inventory.Container"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.FontRenderer"/>
+<fullyQualifiedTypeName name="com.manusoftar.mortero.items.SalitreItem"/>
+<fullyQualifiedTypeName name="com.manusoftar.mortero.items.SaltPowder"/>
+<fullyQualifiedTypeName name="net.minecraft.inventory.IInventory"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="com.manusoftar.mortero.handlers.ContenedorBase"/>
+<fullyQualifiedTypeName name="com.manusoftar.mortero.proxy.ClientProxy"/>
+<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockFurnace"/>
+<fullyQualifiedTypeName name="net.minecraft.tileentity.TileEntityFurnace"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 </qualifiedTypeNameHistroy>

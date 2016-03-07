@@ -1,29 +1,29 @@
-[16:16:24] [Client thread/INFO]: Setting user: Player563
-[16:16:26] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:16:29] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
-[16:16:29] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[16:16:29] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[16:16:29] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[16:16:29] [Thread-9/INFO]: OpenAL initialized.
-[16:16:30] [Sound Library Loader/INFO]: Sound engine started
-[16:16:32] [Client thread/INFO]: Created: 16x16 textures-atlas
-[16:16:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
-[16:16:32] [Client thread/INFO]: SoundSystem shutting down...
-[16:16:33] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[16:16:33] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[16:16:33] [Thread-11/INFO]: Initializing LWJGL OpenAL
-[16:16:33] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[16:16:33] [Thread-11/INFO]: OpenAL initialized.
-[16:16:33] [Sound Library Loader/INFO]: Sound engine started
-[16:16:35] [Client thread/INFO]: Created: 512x512 textures-atlas
-[16:16:49] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[16:16:49] [Server thread/INFO]: Generating keypair
-[16:16:50] [Server thread/INFO]: Preparing start region for level 0
-[16:16:51] [Server thread/INFO]: Preparing spawn area: 95%
-[16:16:51] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:16:52] [Server thread/INFO]: Player563[local:E:2ff2e28f] logged in with entity id 339 at (-119.62835914621733, 64.0, 172.15535135015045)
-[16:16:52] [Server thread/INFO]: Player563 joined the game
-[16:16:53] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@822e8a1[id=1e92cadb-e057-30f8-a789-5ce10551ba1e,name=Player563,properties={},legacy=false]
+[02:43:21] [Client thread/INFO]: Setting user: Player385
+[02:43:23] [Client thread/INFO]: LWJGL Version: 2.9.1
+[02:43:26] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
+[02:43:27] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[02:43:27] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[02:43:27] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[02:43:27] [Thread-9/INFO]: OpenAL initialized.
+[02:43:27] [Sound Library Loader/INFO]: Sound engine started
+[02:43:36] [Client thread/INFO]: Created: 16x16 textures-atlas
+[02:43:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:mortero
+[02:43:37] [Client thread/INFO]: SoundSystem shutting down...
+[02:43:37] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[02:43:37] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[02:43:38] [Thread-11/INFO]: Initializing LWJGL OpenAL
+[02:43:38] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[02:43:38] [Thread-11/INFO]: OpenAL initialized.
+[02:43:38] [Sound Library Loader/INFO]: Sound engine started
+[02:43:40] [Client thread/INFO]: Created: 512x512 textures-atlas
+[02:43:45] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[02:43:45] [Server thread/INFO]: Generating keypair
+[02:43:46] [Server thread/INFO]: Preparing start region for level 0
+[02:43:47] [Server thread/INFO]: Preparing spawn area: 55%
+[02:43:47] [Server thread/INFO]: Changing view distance to 12, from 10
+[02:43:49] [Server thread/INFO]: Player385[local:E:b8b7e263] logged in with entity id 281 at (-123.5132208944546, 64.0, 172.29122633516013)
+[02:43:49] [Server thread/INFO]: Player385 joined the game
+[02:43:51] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@394642e5[id=1e3c9076-6029-36c6-8475-dd38d2030d5f,name=Player385,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:158) [YggdrasilMinecraftSessionService.class:?]
@@ -39,25 +39,57 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827) [guava-17.0.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:148) [YggdrasilMinecraftSessionService.class:?]
 	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:138) [SkinManager$3.class:?]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_60]
-	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_60]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_60]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_60]
-	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
-[16:17:11] [Server thread/INFO]: [Player563: Given [tile.salitre_ore.name] * 20 to Player563]
-[16:17:11] [Client thread/INFO]: [CHAT] Given [tile.salitre_ore.name] * 20 to Player563
-[16:19:03] [Server thread/INFO]: [Player563: Given [item.salitre_crystal.name] * 1 to Player563]
-[16:19:03] [Client thread/INFO]: [CHAT] Given [item.salitre_crystal.name] * 1 to Player563
-[16:19:17] [Server thread/INFO]: Saving and pausing game...
-[16:19:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:19:17] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:19:17] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:19:18] [Server thread/INFO]: Stopping server
-[16:19:18] [Server thread/INFO]: Saving players
-[16:19:18] [Server thread/INFO]: Saving worlds
-[16:19:18] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:19:18] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:19:18] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:19:19] [Client thread/INFO]: Stopping!
-[16:19:19] [Client thread/INFO]: SoundSystem shutting down...
-[16:19:20] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_31]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_31]
+[02:44:47] [Server thread/INFO]: Saving and pausing game...
+[02:44:47] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[02:44:47] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[02:44:47] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[02:45:16] [Server thread/INFO]: Player385 has just earned the achievement [Taking Inventory]
+[02:45:16] [Client thread/INFO]: [CHAT] Player385 has just earned the achievement [Taking Inventory]
+[02:46:39] [Server thread/INFO]: Saving and pausing game...
+[02:46:39] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[02:46:39] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[02:46:39] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[02:49:19] [Server thread/INFO]: [Player385: Set the time to 1000]
+[02:49:19] [Client thread/INFO]: [CHAT] Set the time to 1000
+[02:56:31] [Client thread/WARN]: Failed to load texture: mortero:/textures/gui/mortero_gui.png
+java.io.FileNotFoundException: mortero:/textures/gui/mortero_gui.png
+	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SimpleTexture.java:34) ~[SimpleTexture.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(TextureManager.java:70) [TextureManager.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.bindTexture(TextureManager.java:44) [TextureManager.class:?]
+	at com.manusoftar.mortero.gui.Contenedor.drawGuiContainerBackgroundLayer(Contenedor.java:54) [Contenedor.class:?]
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:96) [GuiContainer.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:460) [ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1139) [EntityRenderer.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1114) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:376) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:117) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_31]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_31]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_31]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[?:1.8.0_31]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
+	at GradleStart.main(Unknown Source) [start/:?]
+[03:06:35] [Server thread/INFO]: [Player385: Set the time to 1000]
+[03:06:35] [Client thread/INFO]: [CHAT] Set the time to 1000
+[03:07:59] [Server thread/INFO]: Saving and pausing game...
+[03:07:59] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[03:07:59] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[03:07:59] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[03:08:01] [Server thread/INFO]: Stopping server
+[03:08:01] [Server thread/INFO]: Saving players
+[03:08:01] [Server thread/INFO]: Saving worlds
+[03:08:01] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[03:08:01] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[03:08:01] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[03:08:02] [Client thread/INFO]: Stopping!
+[03:08:02] [Client thread/INFO]: SoundSystem shutting down...
+[03:08:02] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

@@ -1,6 +1,5 @@
 INDEX VERSION 1.127+C:\Users\Manusoftar\Forge Mods\Mortero\eclipse\.metadata\.plugins\org.eclipse.jdt.core
 1738363733.index
-4257325822.index
 1384282820.index
 1748284308.index
 1018098678.index
@@ -45,7 +44,6 @@ INDEX VERSION 1.127+C:\Users\Manusoftar\Forge Mods\Mortero\eclipse\.metadata\.pl
 1589085883.index
 2396184261.index
 3916428639.index
-1864927896.index
 1797227353.index
 220526496.index
 1662955027.index

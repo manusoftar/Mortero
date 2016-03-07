@@ -35,9 +35,9 @@ public class Contenedor extends GuiContainer {
 		this.ySize = 166;
 		this.xSize = 176;
 		
-		texture = new ResourceLocation(Mortero.MODID+":/textures/gui/mortero_gui.png");
-		
-		
+		texture = new ResourceLocation(Mortero.MODID+":textures/gui/mortero_gui.png");
+		//System.out.println("Textura GUI: " + texture.getResourcePath());
+		//Minecraft.getMinecraft().thePlayer.sendChatMessage("Textura GUI: " + texture.getResourcePath());
 	}
     
     @Override
