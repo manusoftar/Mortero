@@ -1,7 +1,0 @@
-package com.manusoftar.mortero.bloques;
-
-import Block;
-
-public class Azufre extends Block {
-
-}

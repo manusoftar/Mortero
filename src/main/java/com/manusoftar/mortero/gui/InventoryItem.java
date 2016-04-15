@@ -86,7 +86,10 @@ public class InventoryItem implements IInventory {
 		//System.out.println("getStackInSlot con index: " + index);
 		
 			if (items[index]!=null){
-				return items[index];
+				ItemStack aux = items[index].copy();
+				items[index].stackSize  = 0; 
+				items[index] = null;
+				return aux;
 			} 
 			return null;
 	}
@@ -150,26 +153,24 @@ public class InventoryItem implements IInventory {
 		setInventorySlotContents(index, null);
 		return stack;
 	}
-
+	
+	
 	@Override
 	public void setInventorySlotContents(int index, ItemStack stack) {
 		// TODO Auto-generated method stub
 		//invItem = stack;
 			//if (items[index-28]==null){
-		if (items[index]!=null){
-			if (!items[index].getIsItemStackEqual(stack)){
+		
 				items[index]=stack;
 					//}
-				this.eventHandler.onCraftMatrixChanged(this);
+				
+				
 				if (index!=3){
-					this.eventHandler.setCrafted(false);
+					//this.eventHandler.setCrafted(false);
+					this.eventHandler.onCraftMatrixChanged(this);
 				}
 				markDirty();
-			} 
-		} else {
-			items[index]=stack;
-			markDirty();
-		}
+		
 		//System.out.println("setInventorySlotContents con index: " + index);
 	}
 

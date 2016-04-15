@@ -16,7 +16,7 @@ ao:2
 renderClouds:true
 resourcePacks:[]
 lastServer:
-lang:en_US
+lang:es_AR
 chatVisibility:0
 chatColors:true
 chatLinks:true
@@ -86,8 +86,8 @@ key_key.hotbar.6:7
 key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
-soundCategory_master:1.0
-soundCategory_music:1.0
+soundCategory_master:0.6490066
+soundCategory_music:0.5140845
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0
